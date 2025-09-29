@@ -14,7 +14,159 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      bills: {
+        Row: {
+          amount: number | null
+          bill_date: string | null
+          bill_name: string
+          bill_type: string | null
+          created_at: string
+          file_type: string | null
+          file_url: string
+          id: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          amount?: number | null
+          bill_date?: string | null
+          bill_name: string
+          bill_type?: string | null
+          created_at?: string
+          file_type?: string | null
+          file_url: string
+          id?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          amount?: number | null
+          bill_date?: string | null
+          bill_name?: string
+          bill_type?: string | null
+          created_at?: string
+          file_type?: string | null
+          file_url?: string
+          id?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      encrypted_cards: {
+        Row: {
+          bank_name: string | null
+          card_name: string
+          card_type: string | null
+          created_at: string
+          encrypted_card_number: string
+          encrypted_cvv: string
+          encrypted_expiry: string
+          id: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          bank_name?: string | null
+          card_name: string
+          card_type?: string | null
+          created_at?: string
+          encrypted_card_number: string
+          encrypted_cvv: string
+          encrypted_expiry: string
+          id?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          bank_name?: string | null
+          card_name?: string
+          card_type?: string | null
+          created_at?: string
+          encrypted_card_number?: string
+          encrypted_cvv?: string
+          encrypted_expiry?: string
+          id?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          created_at: string
+          display_name: string | null
+          id: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          display_name?: string | null
+          id?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          display_name?: string | null
+          id?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      tickets: {
+        Row: {
+          arrival_location: string | null
+          created_at: string
+          departure_location: string | null
+          id: string
+          passenger_name: string
+          pnr: string
+          qr_data: string | null
+          seat_coach: string | null
+          ticket_image_url: string | null
+          ticket_type: string | null
+          travel_date: string | null
+          travel_time: string | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          arrival_location?: string | null
+          created_at?: string
+          departure_location?: string | null
+          id?: string
+          passenger_name: string
+          pnr: string
+          qr_data?: string | null
+          seat_coach?: string | null
+          ticket_image_url?: string | null
+          ticket_type?: string | null
+          travel_date?: string | null
+          travel_time?: string | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          arrival_location?: string | null
+          created_at?: string
+          departure_location?: string | null
+          id?: string
+          passenger_name?: string
+          pnr?: string
+          qr_data?: string | null
+          seat_coach?: string | null
+          ticket_image_url?: string | null
+          ticket_type?: string | null
+          travel_date?: string | null
+          travel_time?: string | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
